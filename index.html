@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAZR.</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body id="top">
+
+    <!-- ENCABEZADO -->
+    <header class="header">
+        <a href="index.html" class="logo">BAZR.</a>
+
+        <nav class="navegacion">
+            <div class="dropdown">
+                <a href="index.html" class="nav-link dropdown-toggle">Inicio</a>
+                
+                <div class="dropdown-menu">
+                    <a href="index.html">Inicio</a>
+                    <a href="cafeterias.html">Cafeterías</a>
+                    <a href="grafica.html">Gráfica Callejera</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- INICIO / HERO -->
+        <section class="hero" id="inicio">
+
+            <!-- Fotografías decorativas-->
+            <div class="hero-galeria">
+                <img src="imagenes/GC 1.jpeg" alt="" class="hero-foto hero-foto-1">
+                <img src="imagenes/GC 2.jpeg" alt="" class="hero-foto hero-foto-2">
+                <img src="imagenes/GC 3.jpeg" alt="" class="hero-foto hero-foto-3">
+                <img src="imagenes/GC 4.jpeg" alt="" class="hero-foto hero-foto-4">
+                <img src="imagenes/GC 5.jpeg" alt="" class="hero-foto hero-foto-5">
+                <img src="imagenes/GC 6.jpeg" alt="" class="hero-foto hero-foto-6">
+                <img src="imagenes/GC 7.jpeg" alt="" class="hero-foto hero-foto-7">
+                <img src="imagenes/GC 8.jpeg" alt="" class="hero-foto hero-foto-8">
+                <img src="imagenes/GRAFICA C2.jpeg" alt="" class="hero-foto hero-foto-9">
+                <img src="imagenes/GC 9.jpeg" alt="" class="hero-foto hero-foto-10">
+                <img src="imagenes/Cafe 1.jpeg" alt="" class="hero-foto hero-foto-11">
+                <img src="imagenes/GRAFICA 2.jpeg" alt="" class="hero-foto hero-foto-12">
+                <img src="imagenes/GRAFICA 3.jpeg" alt="" class="hero-foto hero-foto-13">
+
+            </div>
+
+            <!-- Texto principal -->
+            <div class="hero-contenido">
+                <h1>Siempre hay algo que descubrir</h1>
+
+                <p class="hero-descripcion">
+                    El lugar para quienes disfrutan
+                    <span id="palabra-rotativa" class="texto-destacado">EXPLORAR</span>
+                </p>
+
+                <a href="#cafeterias" class="boton-explorar">
+                    EXPLORAR
+                    <span>&rarr;</span>
+                </a>
+            </div>
+
+        </section>
+
+        <!-- ACERCA DE -->
+        <section class="acerca" id="acerca">
+            <div class="linea linea-superior"></div>
+
+            <div class="acerca-contenido">
+                <h2>ACERCA DE</h2>
+                <p>
+                    Descubre lugares interesantes, rincones
+                    escondidos y detalles de la ciudad que quizás nunca
+                    habías notado.
+                </p>
+            </div>
+
+            <div class="linea linea-inferior"></div>
+        </section>
+
+        <!-- CAFETERÍAS CON PERSONALIDAD -->
+        <section class="categoria" id="cafeterias">
+            <div class="categoria-contenido">
+                <h2>CAFETERÍAS CON PERSONALIDAD</h2>
+                <p>
+                    Descubre cafeterías en tu ciudad, lee las diferentes
+                    recomendaciones.
+                </p>
+                <a href="cafeterias.html" class="boton-vermas">VER MÁS</a>
+            </div>
+
+            <!-- Galería de cafeterías -->
+            <div class="galeria galeria-cafeterias">
+                <img src="imagenes/Cafe 1.jpeg" alt="Cafetería, bebidas y postres">
+                <img src="imagenes/Cafe 2.jpeg" alt="Interior de una cafetería">
+                <img src="imagenes/Cafe 3.jpeg" alt="Decoración de una cafetería">
+            </div>
+        </section>
+
+        <!-- GRÁFICA CALLEJERA -->
+        <section class="categoria" id="grafica">
+            <div class="categoria-contenido">
+                <h2>GRÁFICA CALLEJERA</h2>
+                <p>
+                    Explora y déjate sorprender por rincones,
+                    posters, fachadas y demás.
+                </p>
+                <a href="grafica.html" class="boton-vermas">VER MÁS</a>
+            </div>
+
+            <!-- Galería de gráfica callejera -->
+            <div class="galeria galeria-grafica">
+                <img src="imagenes/GRAFICA 1.jpeg" alt="Intervención gráfica en la calle">
+                <img src="imagenes/GRAFICA 2.jpeg" alt="Cartel gráfico urbano">
+                <img src="imagenes/GRAFICA 3.jpeg" alt="Gráfica y carteles en espacios urbanos">
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <div class="footer-degradado"></div>
+
+        <div class="footer-contenido">
+            <h2>BAZR.</h2>
+            <img src="imagenes/Recurso 3logoblanco.png" alt="Logotipo BAZR">
+        </div>
+    </footer>
+  
+  
+    <!-- Texto Rotativo Java Script -->
+    <script>
+        // 1. Seleccionamos el elemento del HTML por su ID
+        const elementoPalabra = document.getElementById("palabra-rotativa");
+
+        // 2. Listas paralelas: cada palabra corresponde al color en su misma posición
+        const palabras = ["EXPLORAR", "MIRAR", "COLECCIONAR", "DESCUBRIR"];
+        const colores  = ["#2B7FFF",  "#EC2B7A",   "#C0D71B",  "#FE7BBF"];
+        let indice = 0;
+
+        // 3. Configuramos el color inicial y la transición suave desde JS
+        elementoPalabra.style.display = "inline-block";
+        elementoPalabra.style.color = colores[indice];
+        elementoPalabra.style.transition = "opacity 0.4s ease";
+
+        // 4. Función que cambia palabra y color cada 2 segundos (2000 ms)
+        setInterval(() => {
+            // Desvanece la palabra actual
+            elementoPalabra.style.opacity = "0";
+
+            // Espera 400 ms (mientras es invisible) para cambiar texto y color
+            setTimeout(() => {
+                indice = (indice + 1) % palabras.length;
+                
+                elementoPalabra.textContent = palabras[indice];
+                elementoPalabra.style.color = colores[indice];
+                
+                // Vuelve a mostrar la nueva palabra con su nuevo color
+                elementoPalabra.style.opacity = "1";
+            }, 400);
+
+        }, 2000);
+     document.addEventListener("DOMContentLoaded", () => {
+    const hero = document.querySelector(".hero");
+    const fotosHero = document.querySelectorAll(".hero-foto");
+    const esMovil = window.innerWidth <= 680;
+    const amplitud = esMovil ? 14 : 32;
+
+    const rangoAleatorio = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+    // 1. CONFIGURACIÓN DE FLOTACIÓN ORBITAL AUTOMÁTICA
+    fotosHero.forEach((foto, index) => {
+        const direccion = index % 2 === 0 ? 1 : -1;
+        const duracion = (Math.random() * 6 + 10).toFixed(2);
+
+        // Cada foto recibe una "profundidad" distinta para el efecto del cursor
+        const profundidad = (Math.random() * 35 + 15) * direccion;
+        foto.dataset.profundidad = profundidad;
+
+        const x1 = rangoAleatorio(12, amplitud) * direccion;
+        const y1 = -rangoAleatorio(12, amplitud);
+
+        const x2 = -rangoAleatorio(12, amplitud) * direccion;
+        const y2 = -rangoAleatorio(6, amplitud * 0.7);
+
+        const x3 = rangoAleatorio(8, amplitud * 0.8) * direccion;
+        const y3 = rangoAleatorio(12, amplitud);
+
+        foto.style.setProperty("--duracion", `${duracion}s`);
+        foto.style.setProperty("--x1", `${x1}px`);
+        foto.style.setProperty("--y1", `${y1}px`);
+        foto.style.setProperty("--x2", `${x2}px`);
+        foto.style.setProperty("--y2", `${y2}px`);
+        foto.style.setProperty("--x3", `${x3}px`);
+        foto.style.setProperty("--y3", `${y3}px`);
+        foto.style.setProperty("--r1", `${rangoAleatorio(2, 5) * direccion}deg`);
+        foto.style.setProperty("--r2", `${-rangoAleatorio(2, 5) * direccion}deg`);
+        foto.style.setProperty("--r3", `${rangoAleatorio(1, 4) * direccion}deg`);
+
+        setTimeout(() => {
+            foto.classList.add("flotando");
+        }, index * 90);
+    });
+
+    // 2. REACCIÓN AL MOVER EL CURSOR EN EL HERO
+    if (hero && !esMovil) {
+        hero.addEventListener("mousemove", (e) => {
+            const rect = hero.getBoundingClientRect();
+            // Calcula la posición del cursor normalizada desde el centro (-0.5 a 0.5)
+            const posX = (e.clientX - rect.left) / rect.width - 0.5;
+            const posY = (e.clientY - rect.top) / rect.height - 0.5;
+
+            fotosHero.forEach((foto) => {
+                const profundidad = parseFloat(foto.dataset.profundidad);
+                const moverX = (posX * profundidad).toFixed(1);
+                const moverY = (posY * profundidad).toFixed(1);
+
+                foto.style.setProperty("--mx", `${moverX}px`);
+                foto.style.setProperty("--my", `${moverY}px`);
+            });
+        });
+
+        // Cuando el cursor sale del Hero, regresan suavemente a su órbita normal
+        hero.addEventListener("mouseleave", () => {
+            fotosHero.forEach((foto) => {
+                foto.style.setProperty("--mx", "0px");
+                foto.style.setProperty("--my", "0px");
+            });
+        });
+        // MENÚ DESPLEGABLE EN HEADER (SOPORTE PARA MÓVIL)
+    const dropdown = document.querySelector(".dropdown");
+    const dropdownToggle = document.querySelector(".dropdown-toggle");
+
+    if (dropdown && dropdownToggle) {
+        dropdownToggle.addEventListener("click", (e) => {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                dropdown.classList.toggle("activo");
+            }
+        });
+
+        // Cierra el menú si tocas fuera de él
+        document.addEventListener("click", (e) => {
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove("activo");
+            }
+        });
+    }
+    }
+});
+    </script>
+
+</body>
+</html>
